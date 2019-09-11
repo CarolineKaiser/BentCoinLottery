@@ -32,3 +32,17 @@ for (j in 1:Number_of_tickets){
   }
   print(lottery_ticket)
 }
+
+?rbinom
+rbinom(10, 1, 0.1)
+
+
+num_of_coin_flips <- 10
+Number_of_tickets <- 100
+prob_head <- 0.1
+
+
+for (i in 1:Number_of_tickets){
+  a <- rbinom(num_of_coin_flips, 1, prob_head)
+  print(a)
+}
