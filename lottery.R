@@ -11,15 +11,24 @@ library(stats)
 
 # Small edit! from class 1!
 
-arr <- array(0,10)
-for (i in 1:10){
-  arr[i] <- if (runif(1) < 0.1) 1 else 0
+num_of_coin_flips <- 10
+Number_of_tickets <- 100
+prob_head <- 0.1
+
+
+lottery_ticket <- array(0,num_of_coin_flips)
+for (i in 1:num_of_coin_flips){
+  lottery_ticket[i] <- if (runif(1) < prob_head)
+  paste("head")
+  else paste("tail")
 }
 
-for (j in 1:100){
-  arr <- array(0,10)
-  for (i in 1:10){
-    arr[i] <- if (runif(1) < 0.1) 1 else 0
+for (j in 1:Number_of_tickets){
+  lottery_ticket <- array(0,num_of_coin_flips)
+  for (i in 1:num_of_coin_flips){
+    lottery_ticket[i] <- if (runif(1) < prob_head)
+      paste("head")
+    else paste("tail")
   }
-  print(arr)
+  print(lottery_ticket)
 }
